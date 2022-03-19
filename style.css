@@ -16,3 +16,10 @@
 .grid-block:hover {
     background-color: blue;
 }
+
+#button-container {
+    width: 640px;
+    height: auto;
+    text-align: center;
+    padding-bottom: 24px;
+}

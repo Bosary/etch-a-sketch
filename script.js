@@ -12,3 +12,13 @@ function createBlock() {
 }
 
 createBlock();
+
+function clearGrid() {
+    const container = document.getElementById('grid-container');
+
+    const blocks = document.querySelectorAll('.grid-block');
+    container.remove(blocks);
+}
+
+const reset = document.querySelector("button");
+reset.addEventListener('click', clearGrid);
