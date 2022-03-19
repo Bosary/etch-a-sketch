@@ -1,5 +1,7 @@
 // globals
 const container = document.getElementById('grid-container');
+const btn = document.querySelector("button");
+
 
 function createGrid() {
 
@@ -12,7 +14,7 @@ function createGrid() {
     }
 
     const sizeBlock = calculBlockSize(blocksPerLine);
-    
+
     // Create the grid
     for (let i = 0; i < blocksPerLine ** 2; i++) {
 
@@ -27,11 +29,20 @@ function createGrid() {
 function clearGrid() {
 
     const blocks = document.querySelectorAll('.grid-block');
-    container.remove(blocks);
-}
 
-const reset = document.querySelector("button");
-reset.addEventListener('click', clearGrid);
+    if (blocks.length == 0) {
+        btn.textContent = "Erase and create a new grid";
+        createGrid();
+    } else {
+        
+        for (let i = 0; i < blocks.length; i++) {
+
+            blocks[i].remove();
+        }
+ 
+        createGrid();
+    }
+}
 
 function calculBlockSize(blocksPerLine) {
 
@@ -50,4 +61,4 @@ function calculBlockSize(blocksPerLine) {
     return sizeBlock;
 }
 
-createGrid();
+btn.addEventListener('click', clearGrid);
