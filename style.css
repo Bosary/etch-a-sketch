@@ -12,3 +12,7 @@
     height: 40px;
     border: 1px solid red;
 }
+
+.grid-block:hover {
+    background-color: blue;
+}
