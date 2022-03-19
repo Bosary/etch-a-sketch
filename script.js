@@ -6,9 +6,9 @@ const btn = document.querySelector("button");
 function createGrid() {
 
     const blocksPerLine = parseInt(prompt("How many blocks per line would you like?"), "10");
-
+    console.log(blocksPerLine);
     // input check
-    if (blocksPerLine < 1 || blocksPerLine > 100) {
+    if (blocksPerLine < 1 || blocksPerLine > 100 || isNaN(blocksPerLine)) {
         alert('Wrong input. Enter a number between 1 and 100 please');
         createGrid();
     }
@@ -34,7 +34,7 @@ function clearGrid() {
         btn.textContent = "Erase and create a new grid";
         createGrid();
     } else {
-        
+
         for (let i = 0; i < blocks.length; i++) {
 
             blocks[i].remove();
