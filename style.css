@@ -1,6 +1,6 @@
 #grid-container {
     max-width: 640px;
-    max-height: 640px;
+    max-height: auto;
     display: flex;
     flex-wrap: wrap;
 }
@@ -8,8 +8,6 @@
 .grid-block {
     background-color: black;
     box-sizing: border-box;
-    width: 40px;
-    height: 40px;
     border: 1px solid red;
 }
 
