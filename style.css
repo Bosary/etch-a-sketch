@@ -1,6 +1,6 @@
 #grid-container {
     max-width: 640px;
-    max-height: 640px;
+    max-height: auto;
     display: flex;
     flex-wrap: wrap;
 }
@@ -8,7 +8,16 @@
 .grid-block {
     background-color: black;
     box-sizing: border-box;
-    width: 40px;
-    height: 40px;
     border: 1px solid red;
+}
+
+.grid-block:hover {
+    background-color: blue;
+}
+
+#button-container {
+    width: 640px;
+    height: auto;
+    text-align: center;
+    padding-bottom: 24px;
 }
